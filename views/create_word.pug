@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	form(method= 'POST' action='')
+		label(for='name') Name:
+		input#name.form-control(type='text', placeholder='Enter a word',name='name', required='true', max='30')
+		label(for='type') Type:
+		select#type.form-control(type='select',name='type', placeholder='select a type', required='true')
+			option(value='v') Verb
+			option(value='n') Noun
+			option(value='adj') Adjective
+			option(value='adv') Adverb
+		label(for='mean') Meaning:
+		input#mean.form-control(type='text',name='mean', placeholder='What its mean?')
+		button.btn-primary(type='submit') Ok
+	if (errors)
+		for error in errors
+			li!= error.msg

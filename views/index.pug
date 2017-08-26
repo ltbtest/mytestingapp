@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	
+	ul
+	each word in word_list
+		li(class='non-list')
+			a(href= word.url) #{word.name} 
+			div.text-danger ( #{word.type} ): 
+			div.text-success #{word.mean}.
+			
