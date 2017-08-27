@@ -15,7 +15,7 @@ var app = express();
 
 var mongoose = require('mongoose');
 //Set up mongoose connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://baobk001st:Trunghockjsj1a@ds151993.mlab.com:51993/baobk001st');
+mongoose.connect('mongodb://baobk001st:Trunghockjsj1a@ds151993.mlab.com:51993/baobk001st');
 mongoose.connection.on('error',console.error.bind(console, 'Connection error'));
 
 // view engine setup
